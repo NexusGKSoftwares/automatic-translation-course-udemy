@@ -1,12 +1,7 @@
-import time
-import goslate
+from googletrans import Translator
 
-gs = goslate.Goslate()
+translator = Translator()
 
 text_to_translate = "Hello, how are you?"
-target_language = 'es'
-
-# Wait 1 second between requests
-time.sleep(1)
-translation = gs.translate(text_to_translate, target_language)
-print(translation)
+translated = translator.translate(text_to_translate, src='en', dest='es')
+print(translated.text)
