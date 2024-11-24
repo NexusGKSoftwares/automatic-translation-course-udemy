@@ -1,4 +1,12 @@
+import time
 import goslate
-inserted_text = 'Python is so powerfull'
-new_gs = goslate.Goslate()
-new_gs.translate(inserted_text, 'es')
+
+gs = goslate.Goslate()
+
+text_to_translate = "Hello, how are you?"
+target_language = 'es'
+
+# Wait 1 second between requests
+time.sleep(1)
+translation = gs.translate(text_to_translate, target_language)
+print(translation)
